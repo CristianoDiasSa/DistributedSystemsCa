@@ -1,21 +1,13 @@
 package airQualityService;
-
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-
 import javax.jmdns.ServiceInfo;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
-import io.grpc.stub.StreamObserver;
 import jmDNS.SimpleServiceDiscovery;
-import jmDNS.SimpleServiceRegistration;
-import airQualityService.airQualityServiceGrpc.airQualityServiceBlockingStub;
 
 
 public class Service1_client {

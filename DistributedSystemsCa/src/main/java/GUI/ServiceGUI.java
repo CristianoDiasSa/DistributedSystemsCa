@@ -67,8 +67,7 @@ import javax.swing.SpinnerNumberModel;
 public class ServiceGUI implements ActionListener{
 	
 	private static int qualityPort = 5000;
-	private static int pmPort = 50052;
-	private static int waterPort = 50053;
+
 	
 	public JLabel pmsDataId;
 	public JLabel pmsDataStatus;
