@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "CheckingQualityStreamService";
+option java_outer_classname = "CheckingQualityStreamServiceImpl";
+
+package CheckingQualityStream;
+
+// Interface exported by the server.
+service CheckingQualityStream {
+  // server
+  rpc RequestingStream(stream streamRequest) returns (stream streamResponse) {}
+}
+
+message streamRequest {
+  int32 sample = 1;
+
+}
+
+message streamResponse {
+  string response = 1;
+
+}
+

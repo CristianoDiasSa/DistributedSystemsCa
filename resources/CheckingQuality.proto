@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "CheckingQuality";
+option java_outer_classname = "CheckingQualityImpl";
+
+package CheckingQuality;
+
+// Interface exported by the server.
+service CheckingQuality {
+
+  rpc Checking(CheckingRequest) returns (CheckingResponse) {}
+
+}
+message CheckingRequest {
+	int32 number = 1;
+}
+
+message CheckingResponse {
+	string response  = 1;
+}
+

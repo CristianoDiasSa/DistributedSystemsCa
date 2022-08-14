@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "airQualityService";
+option java_outer_classname = "airQualityServiceImpl";
+
+package airQuality;
+
+// Interface exported by the server.
+service airQualityService {
+  // server
+  rpc requestQualityService(requestQuality) returns (stream responseByArea) {}
+}
+
+message requestQuality {
+  string country = 1; // setCountry(), getCountry()
+  string city = 2;    // setCity(), getCity()
+}
+
+message responseByArea {
+  string city = 1; // setCity(), getCity()
+  int32 index = 2; // setIndex(), getIndex()
+  string band = 3; // setBand(), getBand()
+  string advice = 4; // setAdvice(), getAdvice()
+}
+
