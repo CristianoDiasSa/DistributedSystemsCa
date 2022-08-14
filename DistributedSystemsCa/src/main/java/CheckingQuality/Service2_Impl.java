@@ -8,7 +8,6 @@ public class Service2_Impl extends CheckingQualityImplBase{
 	@Override
 	public void checking(CheckingRequest request, StreamObserver<CheckingResponse> responseObserver) {
 		int number = request.getNumber();
-		System.out.println(number);
 		CheckingResponse.Builder response = CheckingResponse.newBuilder();
 		
 		if(	number >= 7) {
@@ -22,4 +21,3 @@ public class Service2_Impl extends CheckingQualityImplBase{
 
 	}
 	}
-

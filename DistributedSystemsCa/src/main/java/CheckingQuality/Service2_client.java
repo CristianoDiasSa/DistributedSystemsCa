@@ -4,10 +4,8 @@ import java.util.concurrent.TimeUnit;
 import javax.jmdns.ServiceInfo;
 
 import CheckingQuality.CheckingQualityGrpc.CheckingQualityBlockingStub;
-import CheckingQuality.CheckingQualityGrpc.CheckingQualityStub;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import io.grpc.StatusRuntimeException;
 import jmDNS.SimpleServiceDiscovery;
 
 

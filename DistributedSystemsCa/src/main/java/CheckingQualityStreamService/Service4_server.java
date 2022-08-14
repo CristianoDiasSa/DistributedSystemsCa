@@ -1,28 +1,31 @@
-package CheckingQuality;
+package CheckingQualityStreamService;
 
-import CheckingQuality.CheckingQualityGrpc.CheckingQualityImplBase;
+
+
+import CheckingQualityStreamService.CheckingQualityStreamGrpc.CheckingQualityStreamImplBase;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import jmDNS.SimpleServiceRegistration;
-public class Service2_server extends CheckingQualityImplBase {
+
+public class Service4_server extends CheckingQualityStreamImplBase {
 
 	public static void main(String[] args) {
-		Service2_server server2 = new Service2_server();
+		Service4_server server4 = new Service4_server();
 
-    	System.out.println("Starting gRPC Checking Quality service server.");
+    	System.out.println("Starting gRPC Checking Quality Stream service server.");
     	
     	//Define the port
-		int port = 5002;
+		int port = 5004;
 		
 		// jmDNS
-		String service_type = "_CheckingQuality._tcp.local.";
+		String service_type = "_CheckingQualityStreamService._tcp.local.";
 		String service_name = "GrpcServer";
 		SimpleServiceRegistration ssr = new SimpleServiceRegistration();
 		ssr.run(port, service_type, service_name);
 
 		try {		
 			Server server = ServerBuilder.forPort(port)
-					.addService(new Service2_Impl())
+					.addService(new Service4_Impl())
 					.build()
 					.start();
 			System.out.println("Server started, listening on " + port);

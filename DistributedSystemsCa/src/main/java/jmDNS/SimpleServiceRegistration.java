@@ -23,9 +23,9 @@ public class SimpleServiceRegistration {
 		// register the service
 
 		jmdns.registerService(serviceInfo);
-		System.out.printf("registering service with type: %s and name: %s on port %d ", service_type, service_name, service_port);
+		System.out.printf("registering service with type: %s \nName: %s \non port %d ", service_type, service_name, service_port);
 		Thread.sleep(10000);
-		System.out.println("Service Registered");
+		System.out.println("\nService Registered");
 		// unregister
 		// jmdns.unregisterAllServices();
 		} catch (UnknownHostException e) {
